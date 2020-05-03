@@ -9,7 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.graphics.Color;
-import android.support.design.widget.Snackbar;
+import com.google.android.material.snackbar.Snackbar;
 import android.widget.FrameLayout;
 import android.view.View;
 import android.widget.TextView;
@@ -65,7 +65,7 @@ public class MaterialSnackbar extends CordovaPlugin {
             public void run() {
                 snackbar = Snackbar.make(layout, text, Snackbar.LENGTH_LONG);
                 View snackbarView = snackbar.getView();
-                TextView snackbarTextView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                TextView snackbarTextView = (TextView) snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
 
                 // Set duration
                 snackbar.setDuration(duration > 0 ? duration : Snackbar.LENGTH_LONG);
